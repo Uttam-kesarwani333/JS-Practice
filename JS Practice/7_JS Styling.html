@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Styling</title>
+    <style>
+      #box1 {
+        height: 50vh;
+        width: 50vw;
+        background-color: rgb(115, 28, 255);
+        color: white;
+        font-family: arial;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box1">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex rem vero, qui,
+      animi vitae at ea assumenda nihil temporibus, voluptatem earum quam
+      repellendus? Natus sint id quos sequi rerum iure saepe blanditiis alias?
+    </div>
+    <button onclick="modify()">Modify</button>
+    <button onclick="unmodify()">UnModify</button>
+  </body>
+  <script>
+    function modify() {
+      document.getElementById("box1").style.background = "Red";
+      document.getElementById("box1").style.color = "green";
+    }
+    function unmodify() {
+      document.getElementById("box1").style.background = "rgb(115, 28, 255)";
+      document.getElementById("box1").style.color = "white";
+    }
+  </script>
+</html>

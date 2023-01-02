@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clock Web Application</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        margin: 100px auto;
+        height: 40vh;
+        width: 40vw;
+        background-color: rgb(27, 149, 255);
+        padding: 50px;
+        box-shadow: 5px 5px 5px gray;
+      }
+      #res {
+        font-size: 30px;
+      }
+      .container h2 {
+        margin-bottom: 50px;
+      }
+    </style>
+  </head>
+  <body onload="showTime()">
+    <div class="container">
+      <h2>Clock</h2>
+      <div id="res"></div>
+    </div>
+  </body>
+  <script type="text/javascript">
+    function showTime() {
+      var date = new Date();
+      var hour = date.getHours();
+      var min = date.getMinutes();
+      var sec = date.getSeconds();
+      var session = "AM";
+      session = hour >= 12 ? "PM" : session;
+      hour = hour < 10 ? "0" + hour : hour;
+      min = min < 10 ? "0" + min : min;
+      sec = sec < 10 ? "0" + sec : sec;
+      hour = hour > 12 ? hour - 12 : hour;
+
+      var time = hour + " : " + min + " : " + sec + " : " + session;
+      document.getElementById("res").innerText = time;
+      setInterval(showTime, 1000);
+    }
+  </script>
+</html>

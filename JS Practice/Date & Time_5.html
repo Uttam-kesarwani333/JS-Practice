@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clock App</title>
+  </head>
+  <body onload="showTime()">
+    <h2>Clock</h2>
+  </body>
+  <script type="text/javascript">
+    var mahina = [
+      "Jan",
+      "F",
+      "M",
+      "Apr",
+      "M",
+      "Jun",
+      "Jul",
+      "Aug",
+      "S",
+      "O",
+      "N",
+      "December",
+    ];
+    var date = new Date();
+    console.log(mahina[date.getMonth()]);
+    console.log(date.getDay());
+    console.log(date.getSeconds());
+    console.log(date.getHours());
+    console.log(date.getMilliseconds());
+    console.log(date.getDate());
+  </script>
+</html>

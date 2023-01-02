@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validation</title>
+    <style></style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        Enter your phone numner :
+        <input type="text" name="num" id="num" onkeyup="validate(this)" />
+        <div id="res"></div>
+      </div>
+    </div>
+  </body>
+  <script>
+    function validate(elem) {
+      document.getElementById("res").style.color = "red";
+      var num = elem.value;
+      if (isNaN(num)) {
+        document.getElementById("res").innerText = "Enter number only";
+      } else {
+        if (num.length > 10)
+          document.getElementById("res").innerText =
+            "Enter 10 digit number only";
+        else {
+          document.getElementById("res").innerText = "";
+        }
+      }
+    }
+  </script>
+</html>

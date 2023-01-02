@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kilometers to Miles</title>
+  </head>
+  <body>
+    <input type="number" name="km" id="km" step="any" />
+    <button onclick="convert()">Convert</button><br />
+    <h1 id="res"></h1>
+  </body>
+  <script>
+    function convert() {
+      var factor = 0.6213;
+      var km = document.getElementById("km").value;
+      var miles = km * factor;
+      document.getElementById("res").innerHTML = `${miles} miles `;
+    }
+  </script>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        margin: 100px auto;
+        height: 45vh;
+        width: 30vw;
+        padding: 50px;
+        background-color: rgb(35, 255, 57);
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px gray;
+      }
+      .container h1 {
+        margin-bottom: 30px;
+        text-align: center;
+      }
+      .container input {
+        padding: 5px;
+        border: none;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Calcultor</h1>
+      <input type="number" name="num1" id="num1" step="any" />
+      <select name="" id="oper">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="/">/</option>
+        <option value="*">*</option>
+      </select>
+      <input type="number" name="num2" id="num2" step="any" />
+      <br />
+      <input type="button" value="Calculte" onclick="calculate()" />
+      <br />
+      <input type="number" name="res" id="res" />
+    </div>
+  </body>
+  <script src="Third.js"></script>
+</html>
