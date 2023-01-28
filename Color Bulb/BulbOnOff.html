@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Bulb App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <style>
+      body {
+        background-color: black;
+      }
+      .main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .main img {
+        width: 250px;
+      }
+      .btn {
+        margin-top: 35px;
+        padding: 5px 17px;
+        font-size: 18px;
+        background-color: aqua;
+        color: black;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <img src="/images/boff.jpg" id="bulb" />
+      <!-- <img src="/images/Boff.jpg" alt="" /> -->
+
+      <button class="btn" id="btn" onclick="toggle()">Turn Off</button>
+    </div>
+
+    <script>
+      const states = document.getElementById("btn");
+      const bulb = document.getElementById("bulb");
+      const toggle = () => {
+        if (states.innerText == "Turn On") {
+          bulb.src = "/images/Bon.jpg";
+          states.innerText = "Turn Off";
+        } else {
+          bulb.src = "/images/Boff.jpg";
+          states.innerText = "Turn On";
+        }
+      };
+    </script>
+  </body>
+</html>
